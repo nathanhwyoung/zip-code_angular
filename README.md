@@ -4,7 +4,7 @@
 
 ## Description
 
-_An zip-code guessing game_
+_A zip-code guessing game_
 
 ## Setup
 

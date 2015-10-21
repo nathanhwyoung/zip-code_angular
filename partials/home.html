@@ -1,5 +1,14 @@
 <h1>Please enter the first digit in your zip-code</h1>
 
+<form ng-submit="ZipCodeFactory.addFirstChar()" class="form-inline" role="form">
+  <div class="form-group">
+      <input type="text" ng-model="ZipCodeFactory.studentName" class="form-control">
+  </div>
+  <!-- // potentially might want to data-bind to the first municipality offering &
+  // have it appear even before the user submits the number? -->
+  <button type="submit" class="btn btn-default">Submit</button>
+
+
 
 
 
