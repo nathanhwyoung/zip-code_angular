@@ -1,4 +1,6 @@
+zipCodeApp.controller('ZipCodeCtrl', function ZipCodeCtrl($scope, ZipCodeFactory) {
 
+});
 
 
 

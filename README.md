@@ -15,7 +15,6 @@ _Clone and open index.html in your browser._
 _This project makes use of:
 Angular, Javascript, HTML, CSS and Bootstrap._
 
-
 ### Legal
 
 Copyright (c) 2015 Nathan Young

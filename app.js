@@ -12,11 +12,6 @@ zipCodeApp.config(function($stateProvider, $urlRouterProvider) {
 
 
 
-
-
-
-
-
 // var studentSignIn = angular.module('studentSignIn', ['ui.router']);
 //
 // studentSignIn.config(function($stateProvider, $urlRouterProvider) {
