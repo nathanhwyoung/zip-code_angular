@@ -7,6 +7,12 @@ zipCodeApp.config(function($stateProvider, $urlRouterProvider) {
     });
 });
 
+$stateProvider.state('students', {
+        url: "/zipcodes",
+        templateUrl: "partials/zipcodes.html",
+        controller: 'ZipCodeCtrl'
+    });
+
 
 
 
