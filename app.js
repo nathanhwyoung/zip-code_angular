@@ -5,15 +5,15 @@ zipCodeApp.config(function($stateProvider, $urlRouterProvider) {
         url: "",
         templateUrl: "partials/home.html"
     });
-});
 
-$stateProvider.state('students', {
+
+$stateProvider.state('zipcodes', {
         url: "/zipcodes",
         templateUrl: "partials/zipcodes.html",
         controller: 'ZipCodeCtrl'
     });
 
-
+});
 
 
 
