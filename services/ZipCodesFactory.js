@@ -1,6 +1,12 @@
 zipCodeApp.factory('ZipCodeFactory', function ZipCodeFactory() {
   var factory = {};
-  factory.allZipCodes = [];
+  // factory.allZipCodes = Papa.parse(zipcodestest.csv, config)
+
+  Papa.parse(fileInput.files[0], {
+	complete: function(results) {
+		console.log(results);
+	}
+});
 
   factory.currentZipCode = [];
 
