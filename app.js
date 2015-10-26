@@ -10,7 +10,7 @@ zipCodeApp.config(function($stateProvider, $urlRouterProvider) {
 $stateProvider.state('zipcodes', {
         url: "/zipcodes",
         templateUrl: "partials/zipcodes.html",
-        controller: 'ZipCodeCtrl'
+        controller: 'ZipCodesCtrl'
     });
 
 });

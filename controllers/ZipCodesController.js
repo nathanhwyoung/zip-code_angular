@@ -1,5 +1,5 @@
 zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, ZipCodesFactory) {
-    $scope.zipCodes = ZipCodesFactory.zipCodes;
+    $scope.allZipCodes = ZipCodesFactory.allZipCodes;
     $scope.ZipCodesFactory = ZipCodesFactory;
 
 });
