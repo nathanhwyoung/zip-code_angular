@@ -1,18 +1,11 @@
-zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, ZipCodesFactory) {
-    $scope.allZipCodes = ZipCodesFactory.allZipCodes;
-    $scope.ZipCodesFactory = ZipCodesFactory;
+zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
+
+    $scope.myData = new Firebase('https://kshj17qyrg1.firebaseio-demo.com');
+    $scope.myData.on('value', function(snapshot) {
+        console.log("HELLO");
+        // console.log(snapshot.val());
+        // $scope.allZipCodes = snapshot.val();
+
+    });
 
 });
-
-
-
-
-
-
-
-
-// studentSignIn.controller('StudentsCtrl', function StudentsCtrl($scope, StudentsFactory) {
-//     $scope.students = StudentsFactory.students;
-//     $scope.StudentsFactory = StudentsFactory;
-//     // console.log($scope.students);
-// });
