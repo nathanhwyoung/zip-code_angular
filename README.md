@@ -13,7 +13,7 @@ _Clone and open index.html in your browser._
 ## Technologies Used
 
 _This project makes use of:
-Angular, Javascript, HTML, CSS and Bootstrap._
+Angular 1, Javascript, HTML, CSS and Bootstrap, and Firebase_
 
 ### Legal
 
