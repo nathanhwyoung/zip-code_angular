@@ -1,4 +1,4 @@
-zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
+zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArray) {
 
     // create firebase reference
     $scope.myData = new Firebase('https://incandescent-heat-6705.firebaseio.com/');
@@ -13,9 +13,10 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
     contents has been synchronized. if the location has no data, it will be
     triggered with an empty DataSnapshot.
     **/
+    
     // unsure if this approach is correct
     $scope.myData.on('value', function(snapshot) {
-        // console.log(snapshot.val());
+        console.log(snapshot.val());
 
         $scope.allZipCodes = snapshot.val();
         // console.log(allZipCodes.Zipcode);

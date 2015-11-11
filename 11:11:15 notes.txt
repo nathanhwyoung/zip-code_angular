@@ -1,0 +1,21 @@
+OBJECTIVES:
+
+1. merge zip database with population database
+
+2. cover letters and linkedins
+
+3. split databases into 9 different ones??
+
+4. web sockets
+
+
+
+
+
+
+
+ANGULAR FIRE RESEARCH:
+
+need a service to interact with the database?
+
+move the NEW firebase reference to the factory

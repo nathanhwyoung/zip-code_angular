@@ -1,4 +1,4 @@
-var zipCodeApp = angular.module('zipCodeApp', ['ui.router']);
+var zipCodeApp = angular.module('zipCodeApp', ["ui.router", "firebase"]);
 
 zipCodeApp.config(function($stateProvider, $urlRouterProvider) {
     $stateProvider.state('home', {
