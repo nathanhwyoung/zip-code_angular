@@ -1,0 +1,5 @@
+https://www.codementor.io/angularjs/tutorial/firebase-angular-sort-objects
+
+https://www.firebase.com/blog/2013-10-01-queries-part-one.html
+
+https://www.firebase.com/docs/hosting/command-line-tool.html
