@@ -1,8 +1,16 @@
 OBJECTIVES:
 
-1. merge zip database with population database
+ - send results to array (test array prints, large array does not)
 
-2. split databases into 9 different ones??
+ - delete portions of database
+
+ - figure out more databases???
+
+ - merge zip database with population database
+
+ - split databases into 10 different ones??
+
+ - move firebase ref to factory
 
 
 

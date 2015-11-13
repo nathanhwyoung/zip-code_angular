@@ -1,7 +1,7 @@
-zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArray) {
+zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
 
     // create firebase reference
-    $scope.myData = new Firebase('https://incandescent-heat-6705.firebaseio.com/');
+    $scope.zipCodesFB = new Firebase('https://incandescent-heat-6705.firebaseio.com/');
 
     /**
     call the 'on' method on the reference object. this method receives two
@@ -13,13 +13,14 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
     contents has been synchronized. if the location has no data, it will be
     triggered with an empty DataSnapshot.
     **/
-    
-    // unsure if this approach is correct
-    $scope.myData.on('value', function(snapshot) {
-        console.log(snapshot.val());
 
+    $scope.zipCodesFB.on('value', function(snapshot) {
+
+        // assign snapshot to allZipCodes array
         $scope.allZipCodes = snapshot.val();
-        // console.log(allZipCodes.Zipcode);
+        // console.log($scope.allZipCodes);
+        console.log(typeof $scope.allZipCodes);
     });
+
 
 });
