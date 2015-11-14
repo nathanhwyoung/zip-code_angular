@@ -18,8 +18,9 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
 
         // assign snapshot to allZipCodes array
         $scope.allZipCodes = snapshot.val();
-        // console.log($scope.allZipCodes);
-        console.log(typeof $scope.allZipCodes);
+        for (i = 0; i < $scope.allZipCodes.length; i++) {
+          console.log($scope.allZipCodes[i].EstimatedPopulation);
+        }
     });
 
 

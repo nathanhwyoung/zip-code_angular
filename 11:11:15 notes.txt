@@ -2,11 +2,13 @@ OBJECTIVES:
 
  - send results to array (test array prints, large array does not)
 
+ firebase in consoleow
+
  - delete portions of database
 
- - figure out more databases???
-
  - merge zip database with population database
+
+ - figure out more databases???
 
  - split databases into 10 different ones??
 

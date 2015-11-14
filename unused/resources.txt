@@ -7,3 +7,5 @@ https://www.zipcodeapi.com/
 http://codebeautify.org/csv-to-xml-json
 
 http://federalgovernmentzipcodes.us/
+
+http://nitschinger.at/Handling-JSON-like-a-boss-in-PHP
