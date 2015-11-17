@@ -13,4 +13,3 @@ http://nitschinger.at/Handling-JSON-like-a-boss-in-PHP
 
 
 ini_set('memory_limit', '-1');
-(reset memory limit)

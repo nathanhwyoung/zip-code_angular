@@ -1,1 +1,0 @@
-returns a municipality name when a zipcode is entered.
