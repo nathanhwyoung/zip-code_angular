@@ -13,17 +13,35 @@
         $lat = $value['Lat'];
         $long = $value['Long'];
 
+        $file = fopen('zips.json', 'a');
+
         foreach ($decoded_pops as $key => $pop_value) {
           if ($pop_value['Zip Code ZCTA'] == $zipCode) {
-            echo $zipCode . " " .
-                 $city . " " .
-                 $state . " " .
-                 $lat . " " .
-                 $long . " " .
-                 $pop_value['2010 Census Population'] . "\n";
-            break;
+            $population = $pop_value['2010 Census Population'];
+            $zip = json_encode(array('zipCode' => $zipCode,
+                                     'city' => $city,
+                                     'state' => $state,
+                                     'latitude' => $lat,
+                                     'longitude' => $long,
+                                     'population' => $population));
+            echo $zip . "\n";
+
+            fwrite($file, $zip);
+
           }
         }
     }
+    fclose($file);
+    echo "finished!";
+
+    // echo $zipCode . " " .
+    //      $city . " " .
+    //      $state . " " .
+    //      $lat . " " .
+    //      $long . " " .
+    //      $population . "\n";
+    // break;
+
+
 
   ?>
