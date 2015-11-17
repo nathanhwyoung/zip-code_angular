@@ -6,6 +6,9 @@
     $zips = file_get_contents("zipcodes.json");
     $decoded_zips = json_decode($zips, true);
 
+    $file = fopen('zips.json', 'a');
+    fwrite($file, "[\n");
+
     foreach ($decoded_zips as $key => $value) {
         $zipCode = $value['Zipcode'];
         $city = $value['City'];
@@ -13,7 +16,6 @@
         $lat = $value['Lat'];
         $long = $value['Long'];
 
-        $file = fopen('zips.json', 'a');
 
         foreach ($decoded_pops as $key => $pop_value) {
           if ($pop_value['Zip Code ZCTA'] == $zipCode) {
@@ -27,10 +29,13 @@
             echo $zip . "\n";
 
             fwrite($file, $zip);
+            fwrite($file, ", \n");
 
           }
         }
     }
+
+    fwrite($file, "]");
     fclose($file);
     echo "finished!";
 
