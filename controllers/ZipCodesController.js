@@ -1,7 +1,7 @@
 zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
 
     // create firebase reference
-    $scope.zipCodesFB = new Firebase('https://incandescent-heat-6705.firebaseio.com/');
+    $scope.zipCodesFB = new Firebase('https://nydb1.firebaseio.com/');
 
     /**
     call the 'on' method on the reference object. this method receives two
@@ -19,7 +19,8 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
         // assign snapshot to allZipCodes array
         $scope.allZipCodes = snapshot.val();
         for (i = 0; i < $scope.allZipCodes.length; i++) {
-          console.log($scope.allZipCodes[i].EstimatedPopulation);
+          console.log($scope.allZipCodes[i].city);
+          console.log(i);
         }
     });
 

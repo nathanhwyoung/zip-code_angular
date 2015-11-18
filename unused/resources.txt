@@ -10,6 +10,8 @@ http://federalgovernmentzipcodes.us/
 
 http://nitschinger.at/Handling-JSON-like-a-boss-in-PHP
 
+http://maps.huge.info/zip.htm
+
 
 
 ini_set('memory_limit', '-1');
