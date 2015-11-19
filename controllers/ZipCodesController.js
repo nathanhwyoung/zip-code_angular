@@ -1,6 +1,7 @@
 zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
 
     // create firebase reference
+    // this functionality will be moved to the zipCodesFactory
     $scope.zipCodesFB = new Firebase('https://nydb1.firebaseio.com/');
 
     /**

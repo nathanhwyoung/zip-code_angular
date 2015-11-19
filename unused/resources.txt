@@ -12,6 +12,13 @@ http://nitschinger.at/Handling-JSON-like-a-boss-in-PHP
 
 http://maps.huge.info/zip.htm
 
+https://www.codementor.io/angularjs/tutorial/firebase-angular-sort-objects
+
+https://www.firebase.com/blog/2013-10-01-queries-part-one.html
+
+https://www.firebase.com/docs/hosting/command-line-tool.html
+
+
 
 
 ini_set('memory_limit', '-1');
