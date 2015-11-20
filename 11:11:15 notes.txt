@@ -12,3 +12,9 @@ move the NEW firebase reference to the factory
 do we split the DB into 10 separate DBs so it runs quicker? (do both ways to see which is quicker)
 
 try giving the json objects KEYS to see if that helps load time
+
+11/20 THOUGHTS:
+
+populations should be 0, not NULL, as they are now
+
+need to write specs!
