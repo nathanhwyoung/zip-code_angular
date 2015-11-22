@@ -9,3 +9,11 @@ OBJECTIVES:
 
  - re-structure php write to file so that each number of the zip code is stored
    in a separate key so that it can be bound to the zipCode array in progress, so that live DB queries can take place
+
+CURRENTLY WORKING ON/THOUGHTS:
+
+ - utilizing indexOn method and rules in Firebase
+
+ - JSON objects need keys
+
+ - zips_nebraska.json us current working test file & draw from zipcodes.json

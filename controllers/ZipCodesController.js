@@ -2,8 +2,8 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
 
     $scope.zipCodesFB = new Firebase('https://zip-it.firebaseio.com/');
 
-    $scope.zipCodesFB.orderByChild("city").on("child_added", function(snapshot) {
-        console.log(snapshot.val().zipCode + " is " + snapshot.val().city);
+    $scope.zipCodesFB.orderByChild("digit1").equalTo(5).on("child_added", function(snapshot) {
+        console.log("ZIPCODE: " + snapshot.val().zipCode + " is for " + snapshot.val().city);
     });
 
 
