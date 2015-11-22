@@ -1,1 +1,10 @@
-will return a city and state based on a zip code entered
+REQUIREMENTS
+
+- will return a city and state when prompted with a zip code.
+
+- will return an array of JSON objects that match the partial zip code entered.
+
+- will "guess" which zip code the user lives in, based on several different modes:
+    1. completely random
+    2. based on population density/probability
+    3. cheat mode - will read the IP address of the user
