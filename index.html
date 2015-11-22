@@ -1,32 +1,32 @@
 <!doctype html>
 <html lang="en" ng-app="zipCodeApp">
 
-<head>
-    <meta charset="UTF-8">
-    <title>ZIP IT</title>
+    <head>
 
-    <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-    <script src="lib/angular-ui-router.js"></script>
+        <meta charset="UTF-8">
+        <title>ZIP IT</title>
 
-    <!-- Firebase -->
-    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+        <!-- Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+        <script src="lib/angular-ui-router.js"></script>
 
-    <!-- AngularFire -->
-    <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+        <!-- Firebase -->
+        <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 
-    <script src="lib/jquery-1.11.3.js"></script>
-    <script src="app.js"></script>
-    <script src="controllers/ZipCodesController.js"></script>
-    <script src="services/ZipCodesFactory.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- AngularFire -->
+        <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
 
-</head>
+        <!-- Angular Infrastructure & CSS-->
+        <script src="app.js"></script>
+        <script src="controllers/ZipCodesController.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
 
-<body>
-    <div class="container">
-        <div ui-view></div>
-    </div>
-</body>
+    </head>
+
+    <body>
+        <div class="container">
+            <div ui-view></div>
+        </div>
+    </body>
 
 </html>

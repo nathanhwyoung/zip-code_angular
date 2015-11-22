@@ -1,4 +1,4 @@
-# _ZIP CODE GAME_
+# _ZIP-IT_
 
 #### By Nathan Young
 
@@ -8,7 +8,8 @@ _A zip-code guessing game_
 
 ## Setup
 
-_Clone and open index.html in your browser._  
+_Clone and start MAMP server from inside root folder._
+_Navigate to localhost:8888 inside of browser._  
 
 ## Technologies Used
 

@@ -1,19 +1,7 @@
 OBJECTIVES:
 
- - send results to array (test array prints, large array does not)
+ - have 5 separate number inputs that are data-bound to the zipCode array and will update live as the user changes the numbers (will need ng-model for this)
 
- - have 5 separate number inputs that are data-bound to the zipCode array and will update live as the user changes the numbers
-
- - need a service to interact with the database?
-
- - move the NEW firebase reference to the factory
-
- - do we split the DB into 10 separate DBs so it runs quicker? (do both ways to see which is quicker)
+ - may need to query the DB instead of instantiating it all in the factory
 
  - try giving the json objects KEYS to see if that helps load time
-
-11/20 THOUGHTS:
-
- - populations should be 0, not NULL, as they are now
-
- - need to write specs!
