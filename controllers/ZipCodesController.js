@@ -1,9 +1,10 @@
 zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
 
-    $scope.zipCodesFB = new Firebase('https://zip-it.firebaseio.com/');
+    $scope.zipCodesFB = new Firebase('https://zips-test.firebaseio.com/');
 
-    $scope.zipCodesFB.orderByChild("digit1").equalTo(5).on("child_added", function(snapshot) {
-        console.log("ZIPCODE: " + snapshot.val().zipCode + " is for " + snapshot.val().city);
+    $scope.zipCodesFB.orderByChild("digit3").equalTo(4).on("child_added", function(snapshot) {
+        console.log(snapshot.key() + " is " + snapshot.val().digit3);
+        console.log(35928349850293845709238457);
     });
 
 

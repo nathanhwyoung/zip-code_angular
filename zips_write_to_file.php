@@ -15,8 +15,6 @@
             $digit5 = $zipCode[4];
             $city = $value['City'];
             $state = $value['State'];
-            $lat = $value['Lat'];
-            $long = $value['Long'];
             if ($value['EstimatedPopulation'] != "") {
                 $population = $value['EstimatedPopulation'];
             } elseif ($value['EstimatedPopulation'] == "") {
@@ -26,8 +24,6 @@
             $zip = json_encode(array('zipCode' => $zipCode,
                                      'city' => $city,
                                      'state' => $state,
-                                     'latitude' => $lat,
-                                     'longitude' => $long,
                                      'population' => $population,
                                      'digit1' => $digit1,
                                      'digit2' => $digit2,

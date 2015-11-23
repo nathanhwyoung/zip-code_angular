@@ -9,4 +9,4 @@ REQUIREMENTS
     2. based on population density/probability
     3. cheat mode - will read the IP address of the user
 
-- will provide the user with 5 separate number input boxes, each databound to an array index, which will be the array the DB results are based on
+- will provide the user with 5 separate number input boxes, each databound to an array index, which will be the array the DB queries are based on
