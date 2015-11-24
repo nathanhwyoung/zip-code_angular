@@ -1,15 +1,18 @@
  <!-- <h3><a ui-sref="zipcodes">Click here to view all zip-codes</a></h3> -->
 
 
- <div class="form-group">
-   <input type="number" maxlength="1" ng-model="zipCode.firstDigit" class="form-control">
-   <input type="number" maxlength="1" ng-model="zipCode.secondDigit" class="form-control">
-   <input type="number" maxlength="1" ng-model="zipCode.thirdDigit" class="form-control">
-   <input type="number" maxlength="1" ng-model="zipCode.fourthDigit" class="form-control">
-   <input type="number" maxlength="1" ng-model="zipCode.fifthDigit" class="form-control">
+<div class="form-group">
+    <input ng-change="detectChangeDigit1()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.firstDigit" class="form-control">
+    <input ng-change="detectChangeDigit2()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.secondDigit" class="form-control">
+    <input ng-change="detectChangeDigit3()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.thirdDigit" class="form-control">
+    <input ng-change="detectChangeDigit4()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.fourthDigit" class="form-control">
+    <input ng-change="detectChangeDigit5()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.fifthDigit" class="form-control">
+</div>
+
+<div>
    <label>{{ zipCode.firstDigit }}</label>
    <label>{{ zipCode.secondDigit }}</label>
    <label>{{ zipCode.thirdDigit }}</label>
    <label>{{ zipCode.fourthDigit }}</label>
    <label>{{ zipCode.fifthDigit }}</label>
- </div>
+</div>

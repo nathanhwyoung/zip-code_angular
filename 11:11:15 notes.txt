@@ -17,3 +17,13 @@ CURRENTLY WORKING ON/THOUGHTS:
  - JSON objects need keys
 
  - zips_nebraska.json us current working test file & draw from zipcodes.json
+
+ - setup fake array in the model to work out the functionality for the front end in angular
+
+ - possibility: have an individual reset button for each number?
+
+ - utilize editing ng-show & ng-hide functionality?
+
+ - get rid of lat & long in main DB to narrow scope of project & improve time
+
+ - ng-change !!!!!
