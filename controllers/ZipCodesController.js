@@ -1,5 +1,13 @@
 zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
 
+    $scope.zipCode = [
+      {"firstDigit":""},
+      {"secondDigit":""},
+      {"thirdDigit":""},
+      {"fourthDigit":""},
+      {"fifthDigit":""}
+    ]
+
     $scope.zipCodesFB = new Firebase('https://zips-test.firebaseio.com/');
 
     $scope.zipCodesFB.orderByChild("digit3").equalTo(4).on("child_added", function(snapshot) {

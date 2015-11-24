@@ -2,9 +2,14 @@
 
 
  <div class="form-group">
-   <input type="number" maxlength="1" size="1" min="0" max="9" ng-model="zipCode.firstDigit" class="form-control">
-   <input type="number" min="0" max="9" ng-model="zipCode.secondDigit" class="form-control">
-   <input type="number" min="0" max="9" ng-model="zipCode.thirdDigit" class="form-control">
-   <input type="number" min="0" max="9" ng-model="zipCode.fourthDigit" class="form-control">
-   <input type="number" min="0" max="9" ng-model="zipCode.fifthDigit" class="form-control">
+   <input type="number" maxlength="1" ng-model="zipCode.firstDigit" class="form-control">
+   <input type="number" maxlength="1" ng-model="zipCode.secondDigit" class="form-control">
+   <input type="number" maxlength="1" ng-model="zipCode.thirdDigit" class="form-control">
+   <input type="number" maxlength="1" ng-model="zipCode.fourthDigit" class="form-control">
+   <input type="number" maxlength="1" ng-model="zipCode.fifthDigit" class="form-control">
+   <label>{{ zipCode.firstDigit }}</label>
+   <label>{{ zipCode.secondDigit }}</label>
+   <label>{{ zipCode.thirdDigit }}</label>
+   <label>{{ zipCode.fourthDigit }}</label>
+   <label>{{ zipCode.fifthDigit }}</label>
  </div>
