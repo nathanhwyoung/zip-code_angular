@@ -22,6 +22,12 @@ http://fdietz.github.io/recipes-with-angular-js/consuming-external-services/requ
 
 http://codepen.io/xmlilley/pen/GtsEb
 
+https://github.com/angular-ui
+
+http://stackoverflow.com/questions/15666048/angularjs-service-vs-provider-vs-factory
+
+https://docs.angularjs.org/api/ng/service/$http
+
 
 
 
