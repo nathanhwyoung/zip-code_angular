@@ -18,6 +18,10 @@ https://www.firebase.com/blog/2013-10-01-queries-part-one.html
 
 https://www.firebase.com/docs/hosting/command-line-tool.html
 
+http://fdietz.github.io/recipes-with-angular-js/consuming-external-services/requesting-json-data-with-ajax.html
+
+http://codepen.io/xmlilley/pen/GtsEb
+
 
 
 

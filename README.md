@@ -14,7 +14,7 @@ _Navigate to localhost:8888 inside of browser._
 ## Technologies Used
 
 _This project makes use of:
-Angular 1, Javascript, HTML, CSS and Bootstrap, and Firebase_
+AngularJS & FireBase._
 
 ### Legal
 

@@ -3,8 +3,6 @@ OBJECTIVES:
  - have 5 separate number inputs that are data-bound to the zipCode array and
    will update live as the user changes the numbers (will need ng-model for this)
 
- - may need to query the DB instead of instantiating it all in the factory
-
  - try giving the json objects KEYS to see if that helps load time
 
  - re-structure php write to file so that each number of the zip code is stored
@@ -26,4 +24,9 @@ CURRENTLY WORKING ON/THOUGHTS:
 
  - get rid of lat & long in main DB to narrow scope of project & improve time
 
- - ng-change !!!!!
+ - need to refactor change function so there's only one that receives the number of the input changed
+
+ - still need to move DB connection back to factory (or service??)
+
+ - how did previous work load new content into new partials? asking for the newGuess method to load the guesses.html page
+    (look at learnhow to program)

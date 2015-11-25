@@ -19,37 +19,34 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
 
     $scope.detectChangeDigit1 = function() {
       console.log("Input 1 changed!");
+      $scope.newGuess();
     };
 
     $scope.detectChangeDigit2 = function() {
       console.log("Input 2 changed!");
+      $scope.newGuess();
     };
 
     $scope.detectChangeDigit3 = function() {
       console.log("Input 3 changed!");
+      $scope.newGuess();
     };
 
     $scope.detectChangeDigit4 = function() {
       console.log("Input 4 changed!");
+      $scope.newGuess();
     };
 
     $scope.detectChangeDigit5 = function() {
       console.log("Input 5 changed!");
+      $scope.newGuess();
     };
 
+    // guess function
 
-
-    // $scope.zipCodesFB.on('value', function(snapshot) {
-    //
-    //     $scope.allZipCodes = snapshot.val();
-
-        // for (i = 0; i < $scope.allZipCodes.length; i++) {
-        //   console.log(i);
-        //   console.log($scope.allZipCodes[i].city);
-        //   console.log($scope.allZipCodes[i].zipCode);
-        // }
-
-    // });
+    $scope.newGuess = function() {
+      console.log("NEW GUESS!!!");
+    }
 
 
 });
