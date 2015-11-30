@@ -3,7 +3,7 @@
     $zips = file_get_contents("zipcodes.json");
     $decoded_zips = json_decode($zips, true);
 
-    $file = fopen('zips_nebraska.json', 'a');
+    $file = fopen('zips.json', 'a');
     fwrite($file, "[\n");
 
         foreach ($decoded_zips as $key => $value) {
@@ -33,11 +33,9 @@
                                  ));
 
             echo $zip . "\n";
+            fwrite($file, $zip);
+            fwrite($file, ", \n");
 
-            if($state == 'NE') {
-                fwrite($file, $zip);
-                fwrite($file, ", \n");
-            }
         }
 
     fwrite($file, "]");

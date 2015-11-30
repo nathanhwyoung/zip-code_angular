@@ -8,19 +8,11 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
       {"fifthDigit":""}
     ]
 
-    var ref = new Firebase('https://zips-test.firebaseio.com/zips');
+    var ref = new Firebase('https://zip-it.firebaseio.com/zips');
 
-    ref.orderByChild("digit5").equalTo("1").on("child_added", function(snapshot) {
-        console.log(2345);
-        console.log(snapshot.key() + " is " + snapshot.val().zipCode);
+    ref.orderByChild("digit4").equalTo("0").on("child_added", function(snapshot) {
+        console.log("key " + snapshot.key() + " is " + snapshot.val().zipCode + " from  " + snapshot.val().city + " " + snapshot.val().state);
     });
-
-    // var ref = new Firebase("https://dinosaur-facts.firebaseio.com/dinosaurs");
-    //     ref.orderByChild("weight").limitToLast(2).on("child_added", function(snapshot) {
-    //         console.log(snapshot.key());
-    //     });
-
-    // these functions detect input changes.
 
     $scope.detectChangeDigit1 = function() {
       console.log("Input 1 changed!");
