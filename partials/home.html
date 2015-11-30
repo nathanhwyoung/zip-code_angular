@@ -16,3 +16,14 @@
    <label>{{ zipCode.fourthDigit }}</label>
    <label>{{ zipCode.fifthDigit }}</label>
 </div>
+
+
+<div class="zips-display">
+
+  <div class="D1">
+    <ul>
+      <li ng-repeat="zipCode in matchedDigit4Array">{{ zipCode.city }}</li>
+    </ul>
+  </div>
+
+</div>

@@ -14,35 +14,37 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
 
     // methods to detect changes from inputs
     $scope.detectChangeDigit1 = function() {
-      console.log("Input 1 changed!");
-      $scope.newGuess();
+      var query = ref.orderByChild("digit1").equalTo($scope.zipCode.firstDigit.toString());
+      $scope.matchedDigit1Array = $firebaseArray(query);
+      console.log($scope.matchedDigit1Array);
     };
 
     $scope.detectChangeDigit2 = function() {
-      console.log("Input 2 changed!");
-      $scope.newGuess();
+      var query = ref.orderByChild("digit1").equalTo($scope.zipCode.firstDigit.toString());
+      $scope.matchedDigit1Array = $firebaseArray(query);
+      console.log($scope.matchedDigit1Array);
     };
 
     $scope.detectChangeDigit3 = function() {
-      console.log("Input 3 changed!");
-      $scope.newGuess();
+      var query = ref.orderByChild("digit1").equalTo($scope.zipCode.firstDigit.toString());
+      $scope.matchedDigit1Array = $firebaseArray(query);
+      console.log($scope.matchedDigit1Array);
     };
 
     $scope.detectChangeDigit4 = function() {
-      console.log("Input 4 changed!");
-      $scope.newGuess();
+      var query = ref.orderByChild("digit1").equalTo($scope.zipCode.firstDigit.toString());
+      $scope.matchedDigit1Array = $firebaseArray(query);
+      console.log($scope.matchedDigit1Array);
     };
 
     $scope.detectChangeDigit5 = function() {
-      console.log("Input 5 changed!");
-      $scope.newGuess();
+      var query = ref.orderByChild("digit1").equalTo($scope.zipCode.firstDigit.toString());
+      $scope.matchedDigit1Array = $firebaseArray(query);
+      console.log($scope.matchedDigit1Array);
     };
 
-    //new guess function
-    $scope.newGuess = function() {
-      var query = ref.orderByChild("digit4").equalTo($scope.zipCode.fourthDigit.toString());
-      $scope.matchedDigit4Array = $firebaseArray(query);
-      console.log($scope.matchedDigit4Array);
+    $scope.newGuess = function () {
+
     }
 
     // guess function
