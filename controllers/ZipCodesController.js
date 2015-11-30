@@ -1,4 +1,4 @@
-zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
+zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArray) {
 
     // databound to inputs
     $scope.zipCode = [
@@ -38,24 +38,30 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
       $scope.newGuess();
     };
 
-    // guess function
+    //new guess function
     $scope.newGuess = function() {
-      // console.log("NEW GUESS!!!");
-      ref.orderByChild("digit1").equalTo($scope.zipCode.firstDigit.toString())
-        //  .orderByChild("digit2").equalTo($scope.zipCode.secondDigit.toString())
-         .on("child_added", function(snapshot) {
-        console.log("key " + snapshot.key() +
-                    " is " + snapshot.val().zipCode +
-                    " Z " + snapshot.val().digit1 +
-                    " " + snapshot.val().digit2 +
-                    " " + snapshot.val().digit3 +
-                    " " + snapshot.val().digit4 +
-                    " " + snapshot.val().digit5 +
-                    " pop: " + snapshot.val().population +
-                    " from  " + snapshot.val().city +
-                    " " + snapshot.val().state);
-      });
+      var query = ref.orderByChild("digit4").equalTo($scope.zipCode.fourthDigit.toString());
+      $scope.matchedDigit4Array = $firebaseArray(query);
+      console.log($scope.matchedDigit4Array);
     }
+
+    // guess function
+    // $scope.newGuess = function() {
+    //   // console.log("NEW GUESS!!!");
+    //   ref.orderByChild("digit4").equalTo($scope.zipCode.fourthDigit.toString())
+    //      .on("child_added", function(snapshot) {
+    //     console.log("key " + snapshot.key() +
+    //                 " is " + snapshot.val().zipCode +
+    //                 " Z: " + snapshot.val().digit1 +
+    //                 " " + snapshot.val().digit2 +
+    //                 " " + snapshot.val().digit3 +
+    //                 " " + snapshot.val().digit4 +
+    //                 " " + snapshot.val().digit5 +
+    //                 " pop: " + snapshot.val().population +
+    //                 " from  " + snapshot.val().city +
+    //                 " " + snapshot.val().state);
+    //   });
+    // }
 
 
 });
