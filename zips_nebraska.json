@@ -1,4 +1,4 @@
-[
+{"zips":[
 {"zipCode":"68301","city":"ADAMS","state":"NE","population":"1242","digit1":"6","digit2":"8","digit3":"3","digit4":"0","digit5":"1"},
 {"zipCode":"69210","city":"AINSWORTH","state":"NE","population":"2014","digit1":"6","digit2":"9","digit3":"2","digit4":"1","digit5":"0"},
 {"zipCode":"68620","city":"ALBION","state":"NE","population":"2624","digit1":"6","digit2":"8","digit3":"6","digit4":"2","digit5":"0"},
@@ -620,3 +620,4 @@
 {"zipCode":"68073","city":"YUTAN","state":"NE","population":"1713","digit1":"6","digit2":"8","digit3":"0","digit4":"7","digit5":"3"},
 {"zipCode":"68181","city":"OMAHA","state":"NE","population":0,"digit1":"6","digit2":"8","digit3":"1","digit4":"8","digit5":"1"}
 ]
+}
