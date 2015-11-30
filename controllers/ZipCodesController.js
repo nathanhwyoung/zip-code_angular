@@ -1,5 +1,6 @@
 zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
 
+    // databound to inputs
     $scope.zipCode = [
       {"firstDigit":""},
       {"secondDigit":""},
@@ -8,12 +9,10 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
       {"fifthDigit":""}
     ]
 
+    // new firebase reference object
     var ref = new Firebase('https://zip-it.firebaseio.com/zips');
 
-    ref.orderByChild("digit4").equalTo("0").on("child_added", function(snapshot) {
-        console.log("key " + snapshot.key() + " is " + snapshot.val().zipCode + " from  " + snapshot.val().city + " " + snapshot.val().state);
-    });
-
+    // methods to detect changes from inputs
     $scope.detectChangeDigit1 = function() {
       console.log("Input 1 changed!");
       $scope.newGuess();
@@ -40,9 +39,22 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope) {
     };
 
     // guess function
-
     $scope.newGuess = function() {
-      console.log("NEW GUESS!!!");
+      // console.log("NEW GUESS!!!");
+      ref.orderByChild("digit1").equalTo($scope.zipCode.firstDigit.toString())
+        //  .orderByChild("digit2").equalTo($scope.zipCode.secondDigit.toString())
+         .on("child_added", function(snapshot) {
+        console.log("key " + snapshot.key() +
+                    " is " + snapshot.val().zipCode +
+                    " Z " + snapshot.val().digit1 +
+                    " " + snapshot.val().digit2 +
+                    " " + snapshot.val().digit3 +
+                    " " + snapshot.val().digit4 +
+                    " " + snapshot.val().digit5 +
+                    " pop: " + snapshot.val().population +
+                    " from  " + snapshot.val().city +
+                    " " + snapshot.val().state);
+      });
     }
 
 
