@@ -52,32 +52,43 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
         compareArray.push($scope.matchedDigit1Array);
       }
       if(typeof $scope.zipCode.secondDigit !== "undefined") {
-        compareArray.push($scope.matchedDigit2Array);
+        compareArray.splice(1, 0, $scope.matchedDigit2Array);
+        // compareArray.push($scope.matchedDigit2Array);
       }
       if(typeof $scope.zipCode.thirdDigit !== "undefined") {
-        compareArray.push($scope.matchedDigit3Array);
+        compareArray.splice(2, 0, $scope.matchedDigit3Array);
+        // compareArray.push($scope.matchedDigit3Array);
       }
       if(typeof $scope.zipCode.fourthDigit !== "undefined") {
-        compareArray.push($scope.matchedDigit4Array);
+        compareArray.splice(3, 0, $scope.matchedDigit4Array);
+        // compareArray.push($scope.matchedDigit4Array);
       }
       if(typeof $scope.zipCode.fifthDigit !== "undefined") {
-        compareArray.push($scope.matchedDigit5Array);
+        compareArray.splice(4, 0, $scope.matchedDigit5Array);
+        // compareArray.push($scope.matchedDigit5Array);
       }
-      console.log(compareArray);
 
       var resultsArray = [];
 
       // should be refactored recursively
       if (compareArray.length === 1) {
-        console.log(1);
+        resultsArray = compareArray;
+        // console.log(compareArray);
+        angular.forEach(resultsArray, function(value, key) {
+          // console.log(value);
+        })
       } else if (compareArray.length === 2) {
-        console.log(2);
+        console.log(compareArray[1]);
+        // angular.forEach(compareArray[0], function(value, key) {
+        //   console.log(key);
+        // });
+        // console.log(2);
       } else if (compareArray.length === 3) {
-        console.log(3);
+        console.log(compareArray[2]);
       } else if (compareArray.length === 4) {
-        console.log(4);
+        console.log(compareArray[3]);
       } else if (compareArray.length === 5) {
-        console.log(5);
+        console.log(compareArray[4]);
       }
 
       // for(i=0; i < compareArray.length; i++) {
