@@ -96,24 +96,19 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
     $scope.newGuess = function () {
       var compareArray = [];
       if(typeof $scope.zipCode.firstDigit !== "undefined") {
-        compareArray.splice(0, 0, $scope.matchedDigit1ArrayIds);
-        console.log(compareArray);
+        compareArray.push($scope.matchedDigit1ArrayIds);
       }
       if(typeof $scope.zipCode.secondDigit !== "undefined") {
-        compareArray.splice(1, 0, $scope.matchedDigit2ArrayIds);
-        console.log(compareArray);
+          compareArray.push($scope.matchedDigit2ArrayIds);
       }
       if(typeof $scope.zipCode.thirdDigit !== "undefined") {
-        compareArray.splice(2, 0, $scope.matchedDigit3ArrayIds);
-        console.log(compareArray);
+          compareArray.push($scope.matchedDigit3ArrayIds);
       }
       if(typeof $scope.zipCode.fourthDigit !== "undefined") {
-        compareArray.splice(3, 0, $scope.matchedDigit4ArrayIds);
-        console.log(compareArray);
+          compareArray.push($scope.matchedDigit4ArrayIds);
       }
       if(typeof $scope.zipCode.fifthDigit !== "undefined") {
-        compareArray.splice(4, 0, $scope.matchedDigit5ArrayIds);
-        console.log(compareArray);
+          compareArray.push($scope.matchedDigit5ArrayIds);
       }
 
       var resultsArray = [];
@@ -130,12 +125,11 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
       // need to be checked against each other to find zipcodes that are only
       // present in both arrays.
       else if (compareArray.length === 2) {
-        var array1 = compareArray[0];
-        var array2 = compareArray[1];
-        // console.log(array1);
-        // console.log(array2);
-        // console.log(getMatch(compareArray[0], compareArray[1]));
+        // still returning NOTHING - START HERE!
+        //   console.log(getMatch(compareArray[0], compareArray[1]));
 
+        // start with callback functions!!!
+          console.log(compareArray);
       }
 
       else if (compareArray.length === 3) {
