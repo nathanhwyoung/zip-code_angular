@@ -96,19 +96,24 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
     $scope.newGuess = function () {
       var compareArray = [];
       if(typeof $scope.zipCode.firstDigit !== "undefined") {
-        compareArray.push($scope.matchedDigit1ArrayIds);
+        compareArray.splice(0, 0, $scope.matchedDigit1ArrayIds);
+        console.log(compareArray);
       }
       if(typeof $scope.zipCode.secondDigit !== "undefined") {
         compareArray.splice(1, 0, $scope.matchedDigit2ArrayIds);
+        console.log(compareArray);
       }
       if(typeof $scope.zipCode.thirdDigit !== "undefined") {
         compareArray.splice(2, 0, $scope.matchedDigit3ArrayIds);
+        console.log(compareArray);
       }
       if(typeof $scope.zipCode.fourthDigit !== "undefined") {
         compareArray.splice(3, 0, $scope.matchedDigit4ArrayIds);
+        console.log(compareArray);
       }
       if(typeof $scope.zipCode.fifthDigit !== "undefined") {
         compareArray.splice(4, 0, $scope.matchedDigit5ArrayIds);
+        console.log(compareArray);
       }
 
       var resultsArray = [];
@@ -118,23 +123,27 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
       // if there is only one number, only one query is needed, and it can be
       // assigned to the results array.
       if (compareArray.length === 1) {
-        $scope.resultsArray = compareArray;
-        console.log($scope.resultsArray);
+        $scope.resultsArray = compareArray[0];
       }
 
       // if there are two numbers, we need two queries, and the resulting arrays
       // need to be checked against each other to find zipcodes that are only
       // present in both arrays.
       else if (compareArray.length === 2) {
+        var array1 = compareArray[0];
+        var array2 = compareArray[1];
+        // console.log(array1);
+        // console.log(array2);
+        // console.log(getMatch(compareArray[0], compareArray[1]));
 
       }
 
       else if (compareArray.length === 3) {
-        console.log(compareArray[2]);
+        // console.log(compareArray[2]);
       } else if (compareArray.length === 4) {
-        console.log(compareArray[3]);
+        // console.log(compareArray[3]);
       } else if (compareArray.length === 5) {
-        console.log(compareArray[4]);
+        // console.log(compareArray[4]);
       }
 
       // for(i=0; i < compareArray.length; i++) {
