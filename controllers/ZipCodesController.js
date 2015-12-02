@@ -14,7 +14,7 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
     var ref = new Firebase('https://zip-it.firebaseio.com/zips');
 
     // methods to detect changes from inputs and query the DB
-    // should be refactored to only grab id's and NOT full objects
+    //separate ids into different array
     $scope.detectChangeDigit1 = function() {
       var query = ref.orderByChild("digit1").equalTo($scope.zipCode.firstDigit.toString());
       $scope.matchedDigit1Array = $firebaseArray(query);
@@ -24,8 +24,8 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
           $scope.matchedDigit1ArrayIds.push(value.$id);
         });
         $scope.matchedDigit1ArrayIds.sort();
-        console.log($scope.matchedDigit1ArrayIds);
-        console.log($scope.matchedDigit1Array);
+        // console.log($scope.matchedDigit1ArrayIds);
+        // console.log($scope.matchedDigit1Array);
       });
       $scope.newGuess();
     };
@@ -39,8 +39,8 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
           $scope.matchedDigit2ArrayIds.push(value.$id);
         });
         $scope.matchedDigit2ArrayIds.sort();
-        console.log($scope.matchedDigit2ArrayIds);
-        console.log($scope.matchedDigit2Array);
+        // console.log($scope.matchedDigit2ArrayIds);
+        // console.log($scope.matchedDigit2Array);
       });
       $scope.newGuess();
     };
@@ -54,8 +54,8 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
           $scope.matchedDigit3ArrayIds.push(value.$id);
         });
         $scope.matchedDigit3ArrayIds.sort();
-        console.log($scope.matchedDigit3ArrayIds);
-        console.log($scope.matchedDigit3Array);
+        // console.log($scope.matchedDigit3ArrayIds);
+        // console.log($scope.matchedDigit3Array);
       });
       $scope.newGuess();
     };
@@ -70,8 +70,8 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
 
         });
         $scope.matchedDigit4ArrayIds.sort();
-        console.log($scope.matchedDigit4ArrayIds);
-        console.log($scope.matchedDigit4Array);
+        // console.log($scope.matchedDigit4ArrayIds);
+        // console.log($scope.matchedDigit4Array);
       });
       $scope.newGuess();
     };
@@ -85,8 +85,8 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
           $scope.matchedDigit5ArrayIds.push(value.$id);
         });
         $scope.matchedDigit5ArrayIds.sort();
-        console.log($scope.matchedDigit5ArrayIds);
-        console.log($scope.matchedDigit5Array);
+        // console.log($scope.matchedDigit5ArrayIds);
+        // console.log($scope.matchedDigit5Array);
       });
       $scope.newGuess();
     };
@@ -118,7 +118,8 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
       // if there is only one number, only one query is needed, and it can be
       // assigned to the results array.
       if (compareArray.length === 1) {
-
+        $scope.resultsArray = compareArray;
+        console.log($scope.resultsArray);
       }
 
       // if there are two numbers, we need two queries, and the resulting arrays

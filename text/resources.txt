@@ -28,7 +28,11 @@ http://stackoverflow.com/questions/15666048/angularjs-service-vs-provider-vs-fac
 
 https://docs.angularjs.org/api/ng/service/$http
 
-
+ARRAY COMPARE RESOURCES
+http://www.w3schools.com/jsref/jsref_indexof_array.asp
+http://stackoverflow.com/questions/11015469/javascript-check-array-for-value
+http://stackoverflow.com/questions/10230227/find-values-in-common-between-two-arrays
+http://stackoverflow.com/questions/12433604/how-can-i-find-matching-values-in-two-arrays
 
 
 ini_set('memory_limit', '-1');
