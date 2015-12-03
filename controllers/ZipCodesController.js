@@ -19,8 +19,8 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
     var query = ref.orderByChild("digit1").equalTo($scope.zipCode.firstDigit.toString());
     $scope.matchedDigit1Array = $firebaseArray(query);
     $scope.matchedDigit1ArrayIds = [];
-    $scope.matchedDigit1Array.$loaded().then(function() {
-      angular.forEach($scope.matchedDigit1Array, function(value, key) {
+    $scope.matchedDigit1Array.$loaded().then(function($scope.matchedDigit1Array) {
+      angular.forEach(matchedDigit1Array, function(value, key) {
         $scope.matchedDigit1ArrayIds.push({"id":value.$id, "zip":value.zipCode});
       });
       $scope.matchedDigit1ArrayIds.sort();
@@ -34,8 +34,8 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
     var query = ref.orderByChild("digit2").equalTo($scope.zipCode.secondDigit.toString());
     $scope.matchedDigit2Array = $firebaseArray(query);
     $scope.matchedDigit2ArrayIds = [];
-    $scope.matchedDigit2Array.$loaded().then(function() {
-      angular.forEach($scope.matchedDigit2Array, function(value, key) {
+    $scope.matchedDigit2Array.$loaded().then(function($scope.matchedDigit2Array) {
+      angular.forEach(matchedDigit2Array, function(value, key) {
         $scope.matchedDigit2ArrayIds.push({"id":value.$id, "zip":value.zipCode});
       });
       $scope.matchedDigit2ArrayIds.sort();
@@ -91,10 +91,12 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
     $scope.newGuess();
   };
 
+
+    var compareArray = [];
+
   // GUESS FUNCTION
   // should be refactored
   $scope.newGuess = function() {
-    var compareArray = [];
     if (typeof $scope.zipCode.firstDigit !== "undefined") {
       compareArray.push($scope.matchedDigit1ArrayIds);
     //   console.log("length: " + compareArray.length);
@@ -136,36 +138,63 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
     // assigned to the results array.
     if (compareArray.length === 1) {
       $scope.resultsArray = compareArray[0];
-      console.log("1!");
+    //   console.log("1!");
     }
 
     // if there are two numbers, we need two queries, and the resulting arrays
     // need to be checked against each other to find zipcodes that are only
     // present in both arrays.
     else if (compareArray.length === 2) {
-        var array1 = compareArray[0];
-        var array2 = compareArray[1];
         console.log("2!");
+        // console.log(compareArray[0]);
+        // console.log(compareArray[1]);
 
-        console.log(array1);
-        console.log(array2);
+        // console.log(typeof compareArray);
+        // console.log(typeof compareArray[0]);
+        // console.log(typeof compareArray[1]);
 
-        // array1.forEach(function(value, key) {
-        //     console.log("A0 " + value.id + " " + value.zip);
-        // });
+        // for (i = 0; i < compareArray.length; i++) {
+        //     console.log("08734");
+        // }
+        // console.log(compareArray[0].length);
+        // console.log('bye length');
+        compareArray[0].forEach(function(value, key) {
+            console.log("A0 " + value.id + " " + value.zip);
+        });
         //
-        // array2.forEach(function(value, key) {
-        //     console.log("A1 " + value.id + " " + value.zip);
-        // });
+        // console.log(compareArray[1].length);
+        // console.log('bye length 2');
+        compareArray[1].forEach(function(value, key) {
+            console.log("A1 " + value.id + " " + value.zip);
+        });
 
     } else if (compareArray.length === 3) {
-        console.log("3!");
+        var array1 = compareArray[0];
+        var array2 = compareArray[1];
+        var array3 = compareArray[2];
+        // console.log("3!");
+
+        // console.log(array1);
+        // console.log(array2);
+        // console.log(array2);
+
+        array1.forEach(function(value, key) {
+            console.log("A0 " + value.id + " " + value.zip);
+        });
+
+        array2.forEach(function(value, key) {
+            console.log("A1 " + value.id + " " + value.zip);
+        });
+
+        array3.forEach(function(value, key) {
+            console.log("A2 " + value.id + " " + value.zip);
+        });
 
     } else if (compareArray.length === 4) {
-        console.log("4!");
+        // console.log("4!");
 
     } else if (compareArray.length === 5) {
-        console.log("5!");
+        // console.log("5!");
 
     }
 

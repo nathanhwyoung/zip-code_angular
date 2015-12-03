@@ -1,31 +1,17 @@
 https://en.wikipedia.org/wiki/ZIP_code
-
 http://maps.huge.info/zip.htm
-
 https://www.zipcodeapi.com/
-
 http://codebeautify.org/csv-to-xml-json
-
 http://federalgovernmentzipcodes.us/
-
 http://nitschinger.at/Handling-JSON-like-a-boss-in-PHP
-
 http://maps.huge.info/zip.htm
-
 https://www.codementor.io/angularjs/tutorial/firebase-angular-sort-objects
-
 https://www.firebase.com/blog/2013-10-01-queries-part-one.html
-
 https://www.firebase.com/docs/hosting/command-line-tool.html
-
 http://fdietz.github.io/recipes-with-angular-js/consuming-external-services/requesting-json-data-with-ajax.html
-
 http://codepen.io/xmlilley/pen/GtsEb
-
 https://github.com/angular-ui
-
 http://stackoverflow.com/questions/15666048/angularjs-service-vs-provider-vs-factory
-
 https://docs.angularjs.org/api/ng/service/$http
 
 ARRAY COMPARE RESOURCES
@@ -36,3 +22,16 @@ http://stackoverflow.com/questions/12433604/how-can-i-find-matching-values-in-tw
 
 
 ini_set('memory_limit', '-1');
+
+http://tech.small-improvements.com/2013/09/10/angularjs-performance-with-large-lists/
+https://www.reddit.com/r/angularjs/comments/2cvgou/angularjs_with_large_data/
+http://toddmotto.com/simple-foreach-implementation-for-objects-nodelists-arrays-with-automatic-type-looping/
+http://stackoverflow.com/questions/11873570/angularjs-for-loop-with-numbers-ranges
+http://stackoverflow.com/questions/18646756/how-to-run-function-in-angular-controller-on-document-ready
+
+
+
+http://www.toptal.com/javascript/10-most-common-javascript-mistakes
+http://www.impressivewebs.com/callback-functions-javascript/
+
+https://blog.risingstack.com/asynchronous-javascript/
