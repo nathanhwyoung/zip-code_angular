@@ -14,13 +14,13 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
   var ref = new Firebase('https://zip-it.firebaseio.com/zips');
 
   // methods to detect changes from inputs and query the DB
-  //separate ids into different array
+  // REFACTOR: make DRYer, object-oriented, pass value into functions!!
   $scope.detectChangeDigit1 = function() {
     var query = ref.orderByChild("digit1").equalTo($scope.zipCode.firstDigit.toString());
     $scope.matchedDigit1Array = $firebaseArray(query);
     $scope.matchedDigit1ArrayIds = [];
-    $scope.matchedDigit1Array.$loaded().then(function($scope.matchedDigit1Array) {
-      angular.forEach(matchedDigit1Array, function(value, key) {
+    $scope.matchedDigit1Array.$loaded().then(function() {
+      angular.forEach($scope.matchedDigit1Array, function(value, key) {
         $scope.matchedDigit1ArrayIds.push({"id":value.$id, "zip":value.zipCode});
       });
       $scope.matchedDigit1ArrayIds.sort();
@@ -34,8 +34,8 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
     var query = ref.orderByChild("digit2").equalTo($scope.zipCode.secondDigit.toString());
     $scope.matchedDigit2Array = $firebaseArray(query);
     $scope.matchedDigit2ArrayIds = [];
-    $scope.matchedDigit2Array.$loaded().then(function($scope.matchedDigit2Array) {
-      angular.forEach(matchedDigit2Array, function(value, key) {
+    $scope.matchedDigit2Array.$loaded().then(function() {
+      angular.forEach($scope.matchedDigit2Array, function(value, key) {
         $scope.matchedDigit2ArrayIds.push({"id":value.$id, "zip":value.zipCode});
       });
       $scope.matchedDigit2ArrayIds.sort();
@@ -92,11 +92,11 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
   };
 
 
-    var compareArray = [];
 
   // GUESS FUNCTION
   // should be refactored
   $scope.newGuess = function() {
+    var compareArray = [];
     if (typeof $scope.zipCode.firstDigit !== "undefined") {
       compareArray.push($scope.matchedDigit1ArrayIds);
     //   console.log("length: " + compareArray.length);
@@ -158,15 +158,15 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
         // }
         // console.log(compareArray[0].length);
         // console.log('bye length');
-        compareArray[0].forEach(function(value, key) {
-            console.log("A0 " + value.id + " " + value.zip);
-        });
+        // compareArray[0].forEach(function(value, key) {
+        //     console.log("A0 " + value.id + " " + value.zip);
+        // });
         //
         // console.log(compareArray[1].length);
         // console.log('bye length 2');
-        compareArray[1].forEach(function(value, key) {
-            console.log("A1 " + value.id + " " + value.zip);
-        });
+        // compareArray[1].forEach(function(value, key) {
+        //     console.log("A1 " + value.id + " " + value.zip);
+        // });
 
     } else if (compareArray.length === 3) {
         var array1 = compareArray[0];
