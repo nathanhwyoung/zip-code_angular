@@ -1,55 +1,42 @@
- <!-- <h3><a ui-sref="zipcodes">Click here to view all zip-codes</a></h3> -->
+<div class="container">
 
+    <div class="col-md-12">
 
-<!-- this needs to be a custom directive -->
+        <div class="title">
+            <p>
+                ZIP IT (in progress)
+            </p>
+        </div>
 
-<div class="form-group" class="inputs">
-    <input ng-change="detectChangeDigit1()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.firstDigit" class="form-control">
-    <input ng-change="detectChangeDigit2()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.secondDigit" class="form-control">
-    <input ng-change="detectChangeDigit3()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.thirdDigit" class="form-control">
-    <input ng-change="detectChangeDigit4()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.fourthDigit" class="form-control">
-    <input ng-change="detectChangeDigit5()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.fifthDigit" class="form-control">
+        <div class="instructions">
+            <p>
+                ENTER ANY NUMBER OF YOUR ZIP CODE:
+            </p>
+
+        </div>
+
+        <div class="inputs" class="form-group" >
+            <input ng-change="detectChangeDigit1()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.firstDigit" class="form-control">
+            <input ng-change="detectChangeDigit2()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.secondDigit" class="form-control">
+            <input ng-change="detectChangeDigit3()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.thirdDigit" class="form-control">
+            <input ng-change="detectChangeDigit4()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.fourthDigit" class="form-control">
+            <input ng-change="detectChangeDigit5()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.fifthDigit" class="form-control">
+        </div>
+
+        <div class="outputs">
+            <label>{{ zipCode.firstDigit }}</label>
+            <label>{{ zipCode.secondDigit }}</label>
+            <label>{{ zipCode.thirdDigit }}</label>
+            <label>{{ zipCode.fourthDigit }}</label>
+            <label>{{ zipCode.fifthDigit }}</label>
+        </div>
+
+        <div class="guess">
+            <ul>
+                <li ng-repeat="zipCode in resultsArray | limitTo:1">Do you live in {{ zipCode.city + ", " + zipCode.state }}?</li>
+            </ul>
+        </div>
+
+    </div>
+
 </div>
-
-<div>
-   <label>{{ zipCode.firstDigit }}</label>
-   <label>{{ zipCode.secondDigit }}</label>
-   <label>{{ zipCode.thirdDigit }}</label>
-   <label>{{ zipCode.fourthDigit }}</label>
-   <label>{{ zipCode.fifthDigit }}</label>
-</div>
-
-
-<!-- <div class="zips-display">
-
-  <div class="D1">
-    <ul>
-      <li ng-repeat="zipCode in matchedDigit1Array">{{ zipCode.city }}, {{ zipCode.state }}</li>
-    </ul>
-  </div>
-
-  <div class="D2">
-    <ul>
-      <li ng-repeat="zipCode in matchedDigit2Array">{{ zipCode.city }}</li>
-    </ul>
-  </div>
-
-  <div class="D3">
-    <ul>
-      <li ng-repeat="zipCode in matchedDigit3Array">{{ zipCode.city }}</li>
-    </ul>
-  </div>
-
-  <div class="D4">
-    <ul>
-      <li ng-repeat="zipCode in matchedDigit4Array">{{ zipCode.city }}</li>
-    </ul>
-  </div>
-
-  <div class="D5">
-    <ul>
-      <li ng-repeat="zipCode in matchedDigit5Array">{{ zipCode.city }}</li>
-    </ul>
-  </div>
-
-</div> -->

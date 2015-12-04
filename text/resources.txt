@@ -35,3 +35,5 @@ http://www.toptal.com/javascript/10-most-common-javascript-mistakes
 http://www.impressivewebs.com/callback-functions-javascript/
 
 https://blog.risingstack.com/asynchronous-javascript/
+
+http://www.toptal.com/angular-js/top-18-most-common-angularjs-developer-mistakes

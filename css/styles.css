@@ -13,3 +13,44 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.inputs {
+    padding-top: 10%;
+    margin: auto;
+    width: 60%;
+    /*border:3px solid #73AD21;*/
+    padding: 10px;
+}
+
+.title {
+    padding-top: 10%;
+    margin: auto;
+    width: 60%;
+    /*border:3px solid #73AD21;*/
+    padding: 10px;
+    font-size: 300%;
+
+}
+
+.outputs {
+    padding-top: 10%;
+    padding-left: 10%;
+    margin: auto;
+    width: 60%;
+    /*border:3px solid #73AD21;*/
+    padding: 10px;
+}
+
+.instructions {
+    padding-top: 10%;
+    margin: auto;
+    width: 60%;
+    font-size: 230%;
+}
+
+.guess {
+    padding-top: 10%;
+    margin: auto;
+    width: 60%;
+    font-size: 230%;
+}
