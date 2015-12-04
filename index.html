@@ -16,22 +16,52 @@
         <!-- AngularFire -->
         <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
 
-        <!-- AngularFire -->
-        <script src="lib/angular-filter/dist/angular-filter.min.js"></script>
-
         <!-- Angular Infrastructure & CSS-->
         <script src="app.js"></script>
         <script src="controllers/ZipCodesController.js"></script>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/styles.css">
-        <script src="lib/utility.js"></script>
 
     </head>
 
-    <body>
+    <body ng-controller="ZipCodesCtrl">
         <div class="container">
-            <div ui-view></div>
+
+            <div class="col-md-12">
+
+                <div class="instructions">
+                    <p>
+                        ENTER ANY NUMBER OF YOUR ZIP CODE:
+                    </p>
+
+                </div>
+
+                <div class="inputs" class="form-group" >
+                    <input ng-change="detectChangeDigit1()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.firstDigit" class="form-control">
+                    <input ng-change="detectChangeDigit2()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.secondDigit" class="form-control">
+                    <input ng-change="detectChangeDigit3()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.thirdDigit" class="form-control">
+                    <input ng-change="detectChangeDigit4()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.fourthDigit" class="form-control">
+                    <input ng-change="detectChangeDigit5()" type="number" maxlength="1" min="0" max="9" ng-model="zipCode.fifthDigit" class="form-control">
+                </div>
+
+                <div class="outputs">
+                    <label>{{ zipCode.firstDigit }}</label>
+                    <label>{{ zipCode.secondDigit }}</label>
+                    <label>{{ zipCode.thirdDigit }}</label>
+                    <label>{{ zipCode.fourthDigit }}</label>
+                    <label>{{ zipCode.fifthDigit }}</label>
+                </div>
+
+                <div class="guess">
+                    <ul>
+                        <li ng-repeat="zipCode in singleResult | limitTo:1">Do you live in {{ zipCode.city + ", " + zipCode.state }}?</li>
+                    </ul>
+                </div>
+
+            </div>
+
         </div>
+
     </body>
 
 </html>

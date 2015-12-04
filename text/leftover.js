@@ -38,6 +38,12 @@
 
 
 
+// var rand = Math.floor((Math.random() * $scope.resultsArray.length) + 1);
+// $scope.singleResult = $scope.resultsArray[rand];
+// console.log($scope.singleResult);
+
+
+
 
 
 // FOR COMPARE 2
