@@ -80,24 +80,24 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
   // GUESS FUNCTION
   // should be refactored
   var newGuess = function() {
-    $scope.compareArray = []
+    var compareArray = []
     if (typeof $scope.zipCode.firstDigit !== "undefined") {
-      $scope.compareArray.push($scope.digit1Array);
+      compareArray.push($scope.digit1Array);
     }
     if (typeof $scope.zipCode.secondDigit !== "undefined") {
-      $scope.compareArray.push($scope.digit2Array);
+      compareArray.push($scope.digit2Array);
     }
     if (typeof $scope.zipCode.thirdDigit !== "undefined") {
-      $scope.compareArray.push($scope.digit3Array);
+      compareArray.push($scope.digit3Array);
     }
     if (typeof $scope.zipCode.fourthDigit !== "undefined") {
-      $scope.compareArray.push($scope.digit4Array);
+      compareArray.push($scope.digit4Array);
     }
     if (typeof $scope.zipCode.fifthDigit !== "undefined") {
-      $scope.compareArray.push($scope.digit5Array);
+      compareArray.push($scope.digit5Array);
     }
 
-    $scope.resultsArray = [];
+    var resultsArray = [];
 
     // should be refactored recursively
 
@@ -107,28 +107,45 @@ zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArr
     // need to be checked against each other to find zipcodes that are only
     // present in both arrays.
 
-    if ($scope.compareArray.length === 1) {
+    if (compareArray.length === 1) {
       console.log("1!");
-      $scope.resultsArray = $scope.compareArray[0];
-    } else if ($scope.compareArray.length === 2) {
+      var counter = 0;
+      resultsArray = compareArray[0];
+      angular.forEach(resultsArray, function(value, key) {
+          console.log(value);
+          counter += 1;
+      });
+      console.log(counter);
+    } else if (compareArray.length === 2) {
       console.log("2!");
-      var array1 = $scope.compareArray[0];
-      var array2 = $scope.compareArray[1];
-      angular.forEach(array1, function(value, key, obj) {
-        // console.log("hi");
-        for(var i = 0; i < array2.length; i++) {
-          if(value.equals === array2[i]) {
-            $scope.resultsArray.push(value);
-          }
-        }
-      })
-    } else if ($scope.compareArray.length === 3) {
+      var tempArray = [];
+      resultsArray = compareArray[0].concat(compareArray[1]);
+      var counter = 0;
+      angular.forEach(resultsArray, function(value, key) {
+          counter += 1;
+      });
+      console.log(counter);
+
+    //   console.log($scope.resultsArray);
+    //   var array1 = $scope.compareArray[0];
+    //   var array2 = $scope.compareArray[1];
+    //   angular.forEach(array1, function(value, key, obj) {
+    //     // console.log("hi");
+    //     for(var i = 0; i < array2.length; i++) {
+    //       if(value.equals === array2[i]) {
+    //         $scope.resultsArray.push(value);
+    //       }
+    //     }
+    // });
+    } else if (compareArray.length === 3) {
       console.log("3!");
-    } else if ($scope.compareArray.length === 4) {
+    } else if (compareArray.length === 4) {
       console.log("4!");
-    } else if ($scope.compareArray.length === 5) {
+    } else if (compareArray.length === 5) {
       console.log("5!");
     }
+
+    $scope.resultsArray = resultsArray;
     // var rand = Math.floor((Math.random() * $scope.resultsArray.length) + 1);
     // $scope.singleResult = $scope.resultsArray[rand];
     // console.log($scope.singleResult);
