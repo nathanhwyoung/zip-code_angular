@@ -1,7 +1,13 @@
     zipCodeApp.controller('ZipCodesCtrl', function ZipCodesCtrl($scope, $firebaseArray) {
 
+
+        // initialize variable so that div does NOT display initially
+        $scope.singleResult = null;
+
+        // move this to factory & refactor
         var ref = new Firebase('https://zip-it.firebaseio.com/zips');
 
+        // refactor these methods to only retrieve the ID's of the objects
         $scope.detectChangeDigit1 = function() {
             var query = ref.orderByChild("digit1").equalTo($scope.zipCode.firstDigit.toString());
             $scope.digit1Array = $firebaseArray(query);
@@ -78,16 +84,15 @@
                 console.log("1!");
                 resultsArray = compareArray[0];
                 angular.forEach(compareArray[0], function(value, key) {
-                    console.log(value.$id);
+                    // console.log(value.$id);
                 });
             } else if (compareArray.length === 2) {
-                console.log("2!");
-                angular.forEach(compareArray[0], function(value, key) {
-                    console.log(value.$id);
-                });
-                angular.forEach(compareArray[1], function(value, key) {
-                    console.log(value);
-                });
+                array1 = compareArray[0];
+                array2 = compareArray[1];
+                console.log(compareArray[0]);
+                console.log(compareArray[1]);
+
+
             } else if (compareArray.length === 3) {
                 console.log("3!");
                 angular.forEach(compareArray[0], function(value, key) {
@@ -105,8 +110,7 @@
             } else if (compareArray.length === 5) {
                 console.log("5!");
             }
-            $scope.singleResult = [];
-            $scope.singleResults = resultsArray[Math.floor(Math.random() * resultsArray.length)];
-            console.log($scope.singleResult);
+            $scope.singleResult = resultsArray[Math.floor(Math.random() * resultsArray.length)];
+            // console.log($scope.singleResult)
         }
     });

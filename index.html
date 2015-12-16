@@ -18,6 +18,7 @@
 
         <!-- Angular Infrastructure & CSS-->
         <script src="app.js"></script>
+        <script src="lib/utility.js"></script>
         <script src="controllers/ZipCodesController.js"></script>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/styles.css">
@@ -53,9 +54,7 @@
                 </div>
 
                 <div class="guess">
-                    <ul>
-                        <li ng-repeat="zipCode in singleResult | limitTo:1">Do you live in {{ zipCode.city + ", " + zipCode.state }}?</li>
-                    </ul>
+                        <div ng-show="singleResult !== null">Do you live in {{ singleResult.city + ", " + singleResult.state }}?</div>
                 </div>
 
             </div>
